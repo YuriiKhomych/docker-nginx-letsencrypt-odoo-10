@@ -171,4 +171,3 @@ The source code for these two images is in the `samples` subfolder, the images a
 
 ## Conclusion
 This can be a fairly simple way to have easy, reproducible deploys for websites with free, auto-renewing TLS certificates. 
-
