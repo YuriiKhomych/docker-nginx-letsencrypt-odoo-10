@@ -173,9 +173,9 @@ The source code for these two images is in the `samples` subfolder, the images a
 This can be a fairly simple way to have easy, reproducible deploys for websites with free, auto-renewing TLS certificates. 
 
 ## SSL odoo Main troubles
-###1. User odoo
+### User odoo
 docker exec -it dockernginxletsencryptodoo_db_1 /bin/bash
 su postgres -c psql
 alter role odoo with password 'odoo';
-###2. Some troubles with permissions for folder :D
+### Some troubles with permissions for folder :D
 chmod -R 777 /folder
