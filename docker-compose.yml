@@ -39,7 +39,7 @@ services:
 
   web:
     restart: always
-    image: odoo:11
+    image: odoo:10
     container_name: odoo
     depends_on:
       - db
@@ -50,17 +50,17 @@ services:
       - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons
     environment:
-      - VIRTUAL_HOST=samplewebsite.example.com
+      - VIRTUAL_HOST=greenpharma.info
       - VIRTUAL_NETWORK=nginx-proxy
       - VIRTUAL_PORT=8069
-      - LETSENCRYPT_HOST=samplewebsite.example.com
-      - LETSENCRYPT_EMAIL=test@example.com
+      - LETSENCRYPT_HOST=greenpharma.info
+      - LETSENCRYPT_EMAIL=test@greenpharma.info
   db:
     restart: always
     image: postgres:9.6
     environment:
-      - POSTGRES_PASSWORD=sample_password
-      - POSTGRES_USER=sample_user
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
       - odoo-db-data:/var/lib/postgresql/data/pgdata
